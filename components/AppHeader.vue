@@ -1,11 +1,15 @@
 <template>
   <header class="trello-header" role="banner" ref="root" :class="{'is-scrolled' : isViewportScrolled}">
-
+    <div class="trello-header__container">
+      <h1><app-logo/></h1>
+    </div>
   </header>
 </template>
 
 <script>
 import baseHeader from '_proto_/base.header.js';
+
+
 
 export default {
   mixins: [baseHeader],
@@ -23,8 +27,26 @@ export default {
   height: 80px;
   top: 0;
   z-index: 2;
+  padding: 1em 0.75em;
 }
 
+
+.trello-header__container {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trello-header__container:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.trello-header .app-logo,
+.trello-header h1  {
+  height: 100%;
+}
 
 .trello-header:before {
   content: '';
@@ -36,6 +58,7 @@ export default {
   transition: opacity 1s ease, box-shadow 1s ease;
   opacity: 0;
   background: #0079bf !important;
+  z-index: -1;
 }
 
 .trello-header.is-scrolled:before {

@@ -1,5 +1,5 @@
 const path = require('path');
-const rootPath = path.posix.resolve(__dirname);
+const rootPath = path.resolve(__dirname);
 
 module.exports = {
   /*
@@ -10,12 +10,13 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'trello clone project with Vue.js' }
+      { hid: 'description', name: 'description', content: 'trello clone project with Vue.js' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: 'https://trello.com/favicon.ico' }
     ]
   },
+  plugins: ['~/plugins/global.js'],
   /*
   ** Customize the progress bar color
   */
@@ -37,7 +38,8 @@ module.exports = {
         })
       }
       // add Alias
-      config.resolve.alias['_proto_'] = path.join(rootPath, 'components/prototype/');
+      config.resolve.alias['_proto_'] = path.posix.resolve('components/prototype/');
+      console.log(config.resolve);
     }
   }
 }
