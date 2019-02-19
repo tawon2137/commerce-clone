@@ -1,3 +1,119 @@
+@import './normalize.css';
+
+b, strong, h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+button, select {
+    appearance: none;
+    border: 0;
+}
+
+button, input, optgroup, select, textarea {
+    font-size: inherit;
+    line-height: inherit;
+}
+
 body {
-    background: #BCD9EA;
+    font-size: 20px;
+    color: #4d4d4d;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+button, html, input, select, textarea {
+    font-family: "jaf-facitweb",-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Charlie Display','Helvetica','Arial',sans-serif;
+}
+
+main {
+
+}
+
+section#hero {
+    background: #0079BF;
+    background: linear-gradient(135deg, #0079BF 0%, #5067C5 100%);
+    color: white;
+    padding-top: 4em;
+}
+
+section#hero .text-area{
+    padding-right: 4%;
+    text-align: left;
+}
+section#hero .title {
+    margin-top: 1em;
+    box-sizing: border-box;
+}
+
+p, span {
+    color: #42526E;
+}
+
+section#hero p {
+    margin: 1em 0;
+    color: #fff;
+    width: 500px;
+}
+
+main section {
+    padding: 3em 1em;
+}
+
+section .title {
+    font-size: 2.75em;
+    line-height: 1.2em;
+}
+
+section .desc {
+    color: #42526E;
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+
+.btn {
+    padding: .5em 1.5em .7em;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    margin: 0.25em auto;
+    font-weight: 500;
+}
+.btn--primary {
+    color: #fff;
+    box-shadow: 0 3px #006644;
+    background: #36B37E;
+}
+
+.btn--secondary {
+    background: #EBECF0;
+    color: #172B4D;
+    box-shadow: 0 3px #C1C7D0;
+}
+
+.btn--primary:active,
+.btn--primary:hover {
+    color: rgba(255,255,255,0.8)
+}
+
+.btn--large {
+    font-size: 1.25em;
+}
+
+
+[class*="layout-"] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+[class*="layout-"] img {
+    
 }

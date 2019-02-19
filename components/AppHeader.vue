@@ -46,6 +46,7 @@ export default {
 .trello-header .app-logo,
 .trello-header h1  {
   height: 100%;
+  margin: 0;
 }
 
 .trello-header:before {

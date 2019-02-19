@@ -2,17 +2,30 @@
   <section>
     <app-header />
     <main class="container">
-      <section>
-        <h3>Trello lets you work more collaboratively and get more done.</h3>
-        <p>Trello’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible and rewarding way.</p>
-        <button>Sign Up – It’s Free!</button>
-        <img src="https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/308998dcb3ed5ab3d01217a4d24ffa03/hero-a.svg" alt="">
+      <section id="hero">
+        <div class="layout-two-col">
+          <div class="text-area">
+            <h1 class="title">Trello lets you work more collaboratively and get more done.</h1>
+            <p class="desc">Trello’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible and rewarding way.</p>
+            <p>
+              <button class="btn btn--primary btn--large">Sign Up – It’s Free!</button>
+            </p>
+          </div>
+          <img src="https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/308998dcb3ed5ab3d01217a4d24ffa03/hero-a.svg" alt="">  
+        </div>
       </section>
-      <section>
-        <h3>Work with any team</h3>
-        <p>Whether it’s for work, a side project or even the next family vacation, Trello helps your team stay organized.</p>
-        <button>Start doing →</button>
-        <img src="https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/308998dcb3ed5ab3d01217a4d24ffa03/hero-a.svg" alt="">
+      <section id="collaborate">
+        <div class="layout-two-col">
+          <div class="text-area">
+            <h3 class="title">Work with any team</h3>
+            <p class="desc">Whether it’s for work, a side project or even the next family vacation, Trello helps your team stay organized.</p>
+            <p>
+              <button class="btn btn--secondary">Start doing →</button>
+            </p>
+          </div>
+          <img src="https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/308998dcb3ed5ab3d01217a4d24ffa03/hero-a.svg" alt="">
+        </div>
+      
       </section>
       <section>
         <h3>Information at a glance</h3>
@@ -52,33 +65,7 @@ export default {
 </script>
 
 <style>
-main.container {
-  margin-top: 80px;
-}
-/* .container {
-  max-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-} */
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
 
 .links {
   padding-top: 15px;
