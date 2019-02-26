@@ -11,9 +11,11 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'trello clone project with Vue.js' },
+
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'https://trello.com/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: 'https://trello.com/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' }
     ]
   },
   plugins: ['~/plugins/global.js'],

@@ -11,7 +11,7 @@
               <button class="btn btn--primary btn--large">Sign Up – It’s Free!</button>
             </p>
           </div>
-          <img src="https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/308998dcb3ed5ab3d01217a4d24ffa03/hero-a.svg" alt="">  
+          <img src="https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/308998dcb3ed5ab3d01217a4d24ffa03/hero-a.svg" alt="">
         </div>
       </section>
       <section id="collaborate">
@@ -61,6 +61,12 @@
         <!-- slide area -->
         <button>Get Started – It’s Free!</button>
       </section>
+       <v-alert
+      :value="true"
+      type="success"
+    >
+      This is a success alert.
+    </v-alert>
     </main>
   </section>
 </template>
