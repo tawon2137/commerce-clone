@@ -31,9 +31,6 @@ export default {
             this.render();
         }
     },
-    created() {
-        console.log('created childCount', this.$children.length);
-    },
     mounted() {
         if(this.initialIndex > -1)  {
             this.index = 0;
@@ -62,17 +59,22 @@ export default {
             return !(item instanceof HTMLElement);
         },
         getElementForItem(item) {
-            return this.isComponent(item) ? item.$el : item;  
+            return this.isComponent(item) ? item.$el : item;
         },
         next() {
             const maxCount = this.$children.length;
             if(this.index < maxCount - 1) {
                 this.index++;
+            }else {
+              this.index = 0;
             }
         },
         prev() {
+            const maxCount = this.$children.length;
             if(this.index > 0) {
                 this.index--;
+            }else {
+              this.index = maxCount - 1;
             }
         }
     }
@@ -116,7 +118,7 @@ export default {
 
     .slide-container__button--next:hover,
     .slide-container__button--next:focus {
-    
+
         background-image: url('../../../assets/img/arrow-next-blue.svg');
     }
 
@@ -151,8 +153,8 @@ export default {
         transform: translateX(-50%);
         z-index: 101;
     }
-    
-    .slide-container__trigger li { 
+
+    .slide-container__trigger li {
         display: block;
         font-size: 0;
         width: 10px;

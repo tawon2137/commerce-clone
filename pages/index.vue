@@ -61,12 +61,6 @@
         <!-- slide area -->
         <button>Get Started – It’s Free!</button>
       </section>
-       <v-alert
-      :value="true"
-      type="success"
-    >
-      This is a success alert.
-    </v-alert>
     </main>
   </section>
 </template>
