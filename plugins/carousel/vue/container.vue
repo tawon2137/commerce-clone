@@ -112,7 +112,7 @@ export default {
     }
 
     .slide-container__button--next {
-        right: 0;
+        right: -40px;
         background-image: url('../../../assets/img/arrow-next-white.svg');
     }
 
@@ -123,13 +123,12 @@ export default {
     }
 
     .slide-container__button--prev {
-        left: 0;
+        left: -40px;
         background-image: url('../../../assets/img/arrow-prev-white.svg');
     }
 
     .slide-container__button--prev:hover,
     .slide-container__button--prev:focus {
-        left: 0;
         background-image: url('../../../assets/img/arrow-prev-blue.svg');
     }
 

@@ -97,28 +97,43 @@ section .desc {
 }
 
 .btn {
-    padding: .5em 1.5em .7em;
+    padding: .7em 3em;
     border-radius: 6px;
     outline: none;
     cursor: pointer;
     margin: 0.25em auto;
-    font-weight: 500;
+    background: #E2E4E6;
+    font-weight: bold;
+    box-shadow: 0 1px 0 #A5ACB0;
+    color: #4d4d4d;
+    text-decoration: none;
 }
+
+.btn:not([disabled]):focus,
+.btn:not([disabled]):hover {
+    background: #C4C9CC;
+}
+
 .btn--primary {
+    padding: .5em 1.5em .7em;
     color: #fff;
     box-shadow: 0 3px #006644;
     background: #36B37E;
+    font-weight: 500;
 }
 
 .btn--secondary {
+    padding: .5em 1.5em .7em;
     background: #EBECF0;
     color: #172B4D;
     box-shadow: 0 3px #C1C7D0;
+    font-weight: 500;
 }
 
 .btn--primary:active,
 .btn--primary:hover {
-    color: rgba(255,255,255,0.8)
+    color: rgba(255,255,255,0.8);
+    background: #36B37E !important;
 }
 
 .btn--large {
@@ -137,6 +152,29 @@ section .desc {
     max-width: 1200px;
     width: 100%;
 }
+.layout-centered {
+    flex-direction: column;
+}
+
+
+.layout-centered__content {
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 650px;
+    text-align: center;
+}
+
+
+.layout-three-col {
+    align-items: flex-start;
+}
+.layout-three-col > *{
+    max-width: calc(100% / 3);
+    text-align: center;
+    vertical-align: top;
+}
+
+
 
 [class*="layout-"] img {
     display: block;
@@ -144,3 +182,80 @@ section .desc {
     max-width: 100%;
 }
 
+.container {
+    width: 100%;
+    max-width: 1098px;
+    margin: auto;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#features .container {
+    max-width: 1098px;
+    width: 100%;
+    margin: auto;
+}
+
+#features .layout-three-col .btn {
+    padding: 0.5em;
+}
+
+p.small {
+    font-size: 0.9em;
+}
+
+.title.small {
+    font-size: 1.125em;
+    margin: 1em auto .5em;
+}
+
+
+.app-store a {
+    display: inline-block;
+    margin: 0.25em 0;
+    height: 50px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.app-store a:hover {
+    opacity: 1;
+}
+
+.app-store img {
+    margin: 0;
+    height: 100%;
+}
+
+#work-smarter .container {
+    background: #42548E;
+    background: -webkit-gradient(linear, left top, left bottom, from(#42548E), to(#6B668C));
+    background: linear-gradient(180deg, #42548E 0%, #6B668C 100%);
+    border-radius: 12px;
+    color: white;
+    padding: 30px;
+}
+
+#work-smarter .logo-container {
+    width: 100%;
+    text-align: center;
+}
+
+#work-smarter .desc {
+    color: #fff;
+}
+
+#bottom-gradient {
+    background: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(46%, #f7ecff), color-stop(74%, #d2ecff), to(#fff));
+    background: linear-gradient(to bottom, #fff 0%, #f7ecff 46%, #d2ecff 74%, #fff 100%);
+}
+
+#work-smarter .btn-container {
+    margin: 2em auto 1em !important;
+}
+
+.logo-container img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1em .5em;
+}
