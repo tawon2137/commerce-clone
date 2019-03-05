@@ -2,6 +2,11 @@
   <header class="trello-header" role="banner" ref="root" :class="{'is-scrolled' : isViewportScrolled}">
     <div class="trello-header__container">
       <h1><app-logo/></h1>
+
+      <ul class="trello-header__menu trello-header__menu--right">
+        <router-link tag="li" to="/" class="trello-header__link">Log In</router-link>
+        <router-link tag="li" to="/" class="btn btn--secondary trello-header__link">Sign Up</router-link>
+      </ul>
     </div>
   </header>
 </template>
@@ -30,6 +35,21 @@ export default {
   padding: 1em 0.75em;
 }
 
+.trello-header__menu {
+  float: right;
+}
+
+.trello-header__menu .btn {
+  padding: .25em 1em .35em;
+  font-size: 0.9em;
+  color: #0079bf;
+  margin: 0;
+}
+
+.trello-header__link {
+  float: left;
+}
+
 
 .trello-header__container {
   height: 100%;
@@ -45,6 +65,7 @@ export default {
 
 .trello-header .app-logo,
 .trello-header h1  {
+  float: left;
   height: 100%;
   margin: 0;
 }
