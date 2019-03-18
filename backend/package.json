@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "clone commerce back-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tawon2137/commerce-clone.git"
+  },
+  "keywords": [
+    "side-project"
+  ],
+  "author": "Tae-woong Kim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tawon2137/commerce-clone/issues"
+  },
+  "homepage": "https://github.com/tawon2137/commerce-clone#readme",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.1.0"
+  }
+}
