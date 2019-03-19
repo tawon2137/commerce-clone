@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
 const env = process.env;
-
+const UserModel = require('./models/user');
 const sequelize = new Sequelize(env.DEV_DB_DATABASE, env.DEV_DB_USER, env.DEV_DB_PASS, {
   host: env.DEV_DB_HOST,
   dialect: 'mysql',
