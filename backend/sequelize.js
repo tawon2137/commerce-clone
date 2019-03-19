@@ -1,16 +1,18 @@
-const Sequelize = require('sequelize')
-const env = process.env;
+const Sequelize = require('sequelize');
 const UserModel = require('./models/user');
-const sequelize = new Sequelize(env.DEV_DB_DATABASE, env.DEV_DB_USER, env.DEV_DB_PASS, {
-  host: env.DEV_DB_HOST,
+
+console.log(process.env.DEV_DB_DATABASE, process.env.DEV_DB_USER, process.env.DEV_DB_PASS);
+const sequelize = new Sequelize(process.env.DEV_DB_DATABASE, process.env.DEV_DB_USER, process.env.DEV_DB_PASS, {
+  host: process.env.DEV_DB_HOST,
   dialect: 'mysql',
   pool: {
     max: 10,
     min: 0,
     acquire: 30000,
     idle: 10000
-  }
-})
+  },
+  port: 3306
+});
 
 const User = UserModel(sequelize, Sequelize);
 // BlogTag will be our way of tracking relationship between Blog and Tag models

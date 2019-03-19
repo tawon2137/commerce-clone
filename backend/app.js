@@ -12,7 +12,6 @@ app.use(bodyParser.json());
 
 /**
  * app Route
- * 
  */
 app.use(require('./route'));
 
